@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Jquery exercices base 3</title>
         <link rel="stylesheet" href="style.css">
+        <script src="jquery.js"> </script>
     </head>
     <body>
         <h1>Exercices Jquery base 3</h1>
@@ -13,11 +14,58 @@
         <!-------------------------------------------- Exercice 1 -------------------------------------->
         <h3><em>Exercice 1</em></h3>
         <p>Céer un bouton et un champ texte dans lequel on affiche le nombre de clics sur le bouton.</p>
+      
+
+
+        <button  id="btn1" > + </button>
+        
+        <p id="p1"> </p>
+
+        <script>
+        
+
+        $(document).ready(function(){
+            var nbclics = 0; 
+            $("#btn1").click(function(){
+                nbclics++ ;
+            $("#p1").text(nbclics);
+        });
+            
+        });
+
+        
+
+        </script>
 
         <hr>
         <!-------------------------------------------- Exercice 2 -------------------------------------->
         <h3>Exercice 2</h3>
         <p>Céer 2 boutons ("+" et "-") et un champ texte dans lequel on augmente ou baisse le chiffre en fonction des boutons cliqués</p>
+
+        <p id="p2"> </p>
+        <button id="btn2"> + </button>
+        <button id="btn3"> - </button>
+
+        <script>
+
+        $(document).ready(function(){
+            var nbclics = 0; 
+            $("#btn2").click(function(){
+                nbclics++ ;
+            $("#p2").text(nbclics);
+        });
+            $("#btn3").click(function(){
+                nbclics-- ;  
+                $("#p2").text(nbclics);
+
+            });
+
+
+        });
+
+        </script>
+
+
 
         <hr>
         <!-------------------------------------------- Exercice 3 -------------------------------------->
@@ -33,6 +81,63 @@
         </ul>
         </p>
 
+        <button id="btn4">1</button>
+        <button id="btn5">2</button>
+        <button id="btn6">3</button>
+        <button id="btn7">4</button>
+        <button id="btn8">5</button>
+
+        <p class="bd1">   </p> 
+
+        <script>
+
+        $(document).ready(function() {
+
+            var taille = 10 ; 
+            $("#btn4").click(function() {
+                taille = taille + 10 ;
+                if (taille > 100){
+                    taille = 10 } ; 
+                    $(".bd1").css("height", taille)
+                });
+            
+
+            $("#btn5").click(function(){
+
+                $(".bd1").css({"background-color":"green"})
+
+            });
+
+            $("#btn6").click(function() {
+
+                $(".bd1").css({"background-color":""})
+            });
+
+            $("#btn7").click(function() {
+                $(".bd1").hide()
+
+            });
+
+            $("#btn8").click(function() {
+                $(".bd1").show()
+
+            });
+
+            
+            
+
+            });
+
+
+
+
+    
+
+
+
+
+        </script>
+
 
         <hr>
         <!-------------------------------------------- Exercice 4 -------------------------------------->
@@ -47,6 +152,20 @@
         <p><b>Bonus</b> : Quand la réponse est trouvée, on obtient le nombre d'essai que l'on a fait.
         </p>
         <hr>
+
+<button id="bt9"> TRY </button>
+<p id="lucky"> </p>
+
+<!-- in work -->
+
+<script>
+
+var nb = Math.floor(Math.random() * 51 ) ; 
+
+
+
+
+</script>
 
 
 

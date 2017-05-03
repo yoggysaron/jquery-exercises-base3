@@ -35,3 +35,16 @@ h3{
     box-shadow: 2px 2px 2px #999;
     background-color: #ff0042;
 }
+
+.bd1 {
+
+    
+     
+    border: solid black ;
+    height: 100px ;
+    width: 200px ;
+    position: absolute;
+    left: 500px; 
+    bottom: 60px; 
+     
+}
