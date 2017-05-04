@@ -129,13 +129,6 @@
             });
 
 
-
-
-    
-
-
-
-
         </script>
 
 
@@ -153,14 +146,44 @@
         </p>
         <hr>
 
+<input id="champ" type="text"> </body>
 <button id="bt9"> TRY </button>
-<p id="lucky"> </p>
+<p id="lucky"> Result : </p>
 
-<!-- in work -->
+
 
 <script>
 
-var nb = Math.floor(Math.random() * 51 ) ; 
+$(document).ready(function(){
+
+var nb=Math.floor(Math.random()*100 ); 
+
+
+$("#bt9").click(function(){
+
+    var coup=$("#champ").val();
+    
+        if (coup<nb) {
+
+        $("#lucky").text("moins");
+
+        }
+
+        else if (coup>nb) {
+
+        $("#lucky").text("plus");
+
+        }
+
+        else (coup=nb) {
+
+        $("#lucky").text("egale");
+
+        }
+
+    });
+
+}); 
 
 
 
